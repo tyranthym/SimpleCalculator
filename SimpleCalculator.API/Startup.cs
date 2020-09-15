@@ -67,11 +67,11 @@ namespace SimpleCalculator.API
   
             //fluent validation
             var assembly = Assembly.GetAssembly(typeof(Startup));
-            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(assembly));
-                //.AddNewtonsoftJson(options =>
-                //{
-                //    options.SerializerSettings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy()));
-                //});
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(assembly))
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy()));
+                });
 
             //app services
             services.AddSingleton<ICalculationService, CalculationService>();
