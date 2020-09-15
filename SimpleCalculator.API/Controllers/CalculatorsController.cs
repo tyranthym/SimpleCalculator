@@ -30,7 +30,7 @@ namespace SimpleCalculator.API.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(CalculationResponse), 200)]
         [ProducesResponseType(typeof(ValidationProblemDetails), 400)]
-        public IActionResult CalculateROIAndFee(CalculationRequest requestModel)
+        public IActionResult Calculate(CalculationRequest requestModel)
         {
             //map request to dto (service layer)
             var dto = _calculationMapper.FromCalculationRequestToCalculationDto(requestModel);
