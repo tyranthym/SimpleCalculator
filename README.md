@@ -23,7 +23,7 @@ An ASP.NET CORE 3.1 webapi project
 - Strategy and factory pattern for implementing calculation rules
 - Dependency Injection on services
 - Fluent validation for server-side model validation
-- Unit testing for business logic layer 
+- Unit testing for business logic layer (xUnit, moq, NFluent, AutoFixture)
  
 
 
